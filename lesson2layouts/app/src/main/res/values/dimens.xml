@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_width">200px</dimen>
+    <dimen name="button_width_big">430px</dimen>
+    <dimen name="button_width_double">400px</dimen>
+    <dimen name="button_height">150px</dimen>
+    <dimen name="margin">15px</dimen>
+    <dimen name="margin_double">30px</dimen>
+    <dimen name="screen_width">650px</dimen>
+</resources>
