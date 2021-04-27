@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:columnCount="4">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_columnSpan="4"
+        android:layout_height="@dimen/button_height"
+        android:textColor="@color/white"
+        android:gravity="start|center_vertical"
+        android:textSize="@dimen/textSize"
+        android:layout_margin="@dimen/margin"
+        tools:text="1234567890"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/_1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/_2" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/_3" />
+    <Space/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/_4" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/_5" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/_6" />
+
+    <Space/>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/_7" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/_8" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/_9" />
+
+
+    <Space/>
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="@dimen/button_width_double"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin"
+        android:layout_columnSpan="2"
+        android:text="@string/_0" />
+
+    <Button
+        android:id="@+id/buttonPoint"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/point" />
+</GridLayout>

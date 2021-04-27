@@ -7,4 +7,5 @@
     <dimen name="margin">15px</dimen>
     <dimen name="margin_double">30px</dimen>
     <dimen name="screen_width">650px</dimen>
+    <dimen name="textSize">30sp</dimen>
 </resources>
