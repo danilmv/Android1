@@ -11,4 +11,12 @@
     <string name="_8">8</string>
     <string name="_0">0</string>
     <string name="point">.</string>
+    <string name="cancel">C</string>
+    <string name="sign">+/-</string>
+    <string name="percent">%</string>
+    <string name="divide">/</string>
+    <string name="multiply">*</string>
+    <string name="subtract">-</string>
+    <string name="add">+</string>
+    <string name="equals">=</string>
 </resources>
