@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/black">
+    android:theme="@style/MyStyle">
 
     <TableRow
         android:layout_width="match_parent"
@@ -13,167 +13,115 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="3"
+            android:layout_span="4"
             android:gravity="start|center_vertical"
-            android:textColor="@color/white"
-            android:textSize="@dimen/textSize"
             tools:text="123456790" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:theme="@style/ButtonStyle">
 
         <Button
             android:id="@+id/buttonC"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
+
             android:text="@string/cancel" />
 
         <Button
             android:id="@+id/buttonSign"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/sign" />
 
         <Button
             android:id="@+id/buttonPercent"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/percent" />
 
         <Button
             android:id="@+id/buttonDiv"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/divide" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:theme="@style/ButtonStyle">
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/_1" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/_2" />
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/_3" />
         <Button
             android:id="@+id/buttonMult"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/multiply" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:theme="@style/ButtonStyle">
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/_4" />
 
         <Button
             android:id="@+id/button5"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/_5" />
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/_6" />
         <Button
             android:id="@+id/buttonSubt"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/subtract" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:theme="@style/ButtonStyle">
 
         <Button
             android:id="@+id/button7"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/_7" />
 
         <Button
             android:id="@+id/button8"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/_8" />
 
         <Button
             android:id="@+id/button9"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/_9" />
 
         <Button
             android:id="@+id/buttonAdd"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/add" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:theme="@style/ButtonStyle">
 
         <Button
             android:id="@+id/button0"
             android:layout_width="@dimen/button_width_double"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:layout_span="2"
             android:text="@string/_0" />
 
         <Button
             android:id="@+id/buttonPoint"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/point" />
 
         <Button
             android:id="@+id/buttonEq"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_margin="@dimen/margin"
             android:text="@string/equals" />
     </TableRow>
 </TableLayout>
