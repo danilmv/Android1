@@ -4,3 +4,4 @@
  lesson3: GridLayout, TableLayout, calculatorProcessing
  lesson4: Styles and Themes
  lesson5: Intents
+ lesson6: Fragments
