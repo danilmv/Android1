@@ -5,3 +5,4 @@
  lesson4: Styles and Themes
  lesson5: Intents
  lesson6: Fragments
+ lesson7: Menus
