@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">lesson7.menus</string>
+    <string name="drawer_header">Header</string>
+    <string name="about">About</string>
+    <string name="settings">Settins</string>
+    <string name="navigation">Navigation</string>
+    <string name="open_drawer">open</string>
+    <string name="close_drawer">close</string>
+    <string name="more">more</string>
 </resources>
