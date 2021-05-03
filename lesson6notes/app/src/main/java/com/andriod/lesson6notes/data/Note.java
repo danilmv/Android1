@@ -37,6 +37,7 @@ public class Note {
         Note note = new Note();
         note.setHeader("Header #" + ID++);
         note.setDate("01.01.2001");
+        note.setMessage("Test");
         return note;
     }
 
@@ -44,5 +45,13 @@ public class Note {
     @Override
     public String toString() {
         return header;
+    }
+
+    public int compare(Note n) {
+        int result = 0;
+        result = header.compareTo(n.header);
+        if (result == 0)
+            result = message.compareTo(n.getMessage());
+        return result;
     }
 }

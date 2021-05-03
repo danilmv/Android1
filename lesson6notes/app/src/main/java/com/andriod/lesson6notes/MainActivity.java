@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         isLandscape = getResources().getConfiguration().orientation== Configuration.ORIENTATION_LANDSCAPE;
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.mainContainer, new ListFragment())
+                .replace(R.id.mainContainer, new RecyclerFragment())
                 .commit();
         if (isIsLandscape())
             getSupportFragmentManager().beginTransaction()
