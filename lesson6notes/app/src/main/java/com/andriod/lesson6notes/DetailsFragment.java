@@ -39,6 +39,13 @@ public class DetailsFragment extends Fragment {
 
     final Calendar myCalendar = Calendar.getInstance();
 
+    public DetailsFragment setListener(OnNotesChangedListener listener) {
+        this.listener = listener;
+        return this;
+    }
+
+    private OnNotesChangedListener listener;
+
     public DetailsFragment() {
     }
 
@@ -77,7 +84,7 @@ public class DetailsFragment extends Fragment {
         showData();
     }
 
-    private void showData(){
+    private void showData() {
         textHeader.setText(note.getHeader());
         textDate.setText(note.getDate());
         editMessage.setText(note.getMessage());
@@ -104,14 +111,27 @@ public class DetailsFragment extends Fragment {
     public void onStop() {
         super.onStop();
 
+//        saveNote();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
         saveNote();
     }
 
-    private void saveNote(){
-        if (note!=null){
+    private void saveNote() {
+        if (note != null) {
             note.setHeader(textHeader.getText().toString());
             note.setMessage(editMessage.getText().toString());
             note.setDate(textDate.getText().toString());
+
+            if (listener != null) listener.onChange(index);
         }
+    }
+
+    interface OnNotesChangedListener {
+        void onChange(int listIndex);
     }
 }
