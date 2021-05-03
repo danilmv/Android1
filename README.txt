@@ -6,3 +6,4 @@
  lesson5: Intents
  lesson6: Fragments
  lesson7: Menus
+ lesson8: RecyclerView
