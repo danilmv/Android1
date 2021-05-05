@@ -7,3 +7,4 @@
  lesson6: Fragments
  lesson7: Menus
  lesson8: RecyclerView
+ lesson10: firestore
