@@ -2,12 +2,24 @@ package com.andriod.lesson6notes.data;
 
 import androidx.annotation.NonNull;
 
-public class Note {
+import java.io.Serializable;
+
+public class Note implements Serializable {
+    private String id;
     private String date;
     private String header;
     private String message;
 
     private static int ID = 0;
+
+    public Note() {
+    }
+
+    public Note(String date, String header, String message) {
+        this.date = date;
+        this.header = header;
+        this.message = message;
+    }
 
     public String getDate() {
         return date;
@@ -35,9 +47,9 @@ public class Note {
 
     public static Note getEmptyNote() {
         Note note = new Note();
-        note.setHeader("Header #" + ID++);
+        note.setHeader("Header #" + ID);
         note.setDate("01.01.2001");
-        note.setMessage("Test");
+        note.setMessage("Test #" + ID++);
         return note;
     }
 
@@ -53,5 +65,13 @@ public class Note {
         if (result == 0)
             result = message.compareTo(n.getMessage());
         return result;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

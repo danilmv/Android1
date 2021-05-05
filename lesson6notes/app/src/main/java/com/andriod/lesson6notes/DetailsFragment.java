@@ -29,6 +29,7 @@ import java.util.Locale;
 public class DetailsFragment extends Fragment {
 
     private static final String INDEX = "index";
+    private static final String NOTE = "note";
 
     private TextView textHeader;
     private TextView textDate;
@@ -49,10 +50,11 @@ public class DetailsFragment extends Fragment {
     public DetailsFragment() {
     }
 
-    public static DetailsFragment newInstance(int index) {
+    public static DetailsFragment newInstance(int index, Note note) {
         DetailsFragment fragment = new DetailsFragment();
         Bundle args = new Bundle();
         args.putInt(INDEX, index);
+        args.putSerializable(NOTE, note);
         fragment.setArguments(args);
         return fragment;
     }
@@ -62,9 +64,9 @@ public class DetailsFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             index = getArguments().getInt(INDEX);
+            note = (Note) getArguments().getSerializable(NOTE);
         }
-
-        note = MainActivity.getNotesManager().get(index);
+//        note = MainActivity.getNotesManager().get(index);
     }
 
     @Override
@@ -85,6 +87,8 @@ public class DetailsFragment extends Fragment {
     }
 
     private void showData() {
+        if (note == null) return;
+
         textHeader.setText(note.getHeader());
         textDate.setText(note.getDate());
         editMessage.setText(note.getMessage());
@@ -127,11 +131,11 @@ public class DetailsFragment extends Fragment {
             note.setMessage(editMessage.getText().toString());
             note.setDate(textDate.getText().toString());
 
-            if (listener != null) listener.onChange(index);
+            if (listener != null) listener.onChange(index, note);
         }
     }
 
     interface OnNotesChangedListener {
-        void onChange(int listIndex);
+        void onChange(int listIndex, Note note);
     }
 }
