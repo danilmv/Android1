@@ -26,7 +26,11 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
 
         if (notes == null) {
             notes = new SortedList<>(Note.class, new SortedListCallback(this));
-            notes.addAll(MainActivity.getNotesManager().getNotes());
+
+            MainActivity.getNotesManager().loadNotes(() -> {
+                notes.addAll(MainActivity.getNotesManager().getNotes());
+                notifyDataSetChanged();
+            });
         }
     }
 
@@ -81,24 +85,26 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
         @Override
         public void onClick(View v) {
             currentItem = getAdapterPosition();
+            Toast.makeText(fragment.getContext(), "Click on " + currentItem, Toast.LENGTH_SHORT).show();
 
             if (MainActivity.isIsLandscape()) {
                 fragment.getFragmentManager().beginTransaction()
-                        .replace(R.id.detailsContainer, DetailsFragment.newInstance(currentItem).setListener(this))
+                        .replace(R.id.detailsContainer, DetailsFragment.newInstance(currentItem, notes.get(currentItem)).setListener(this))
                         .addToBackStack(null)
                         .commit();
             } else {
                 fragment.getFragmentManager().beginTransaction()
-                        .replace(R.id.mainContainer, DetailsFragment.newInstance(currentItem).setListener(this))
+                        .replace(R.id.mainContainer, DetailsFragment.newInstance(currentItem, notes.get(currentItem)).setListener(this))
                         .addToBackStack(null)
                         .commit();
             }
         }
 
         @Override
-        public void onChange(int listIndex) {
+        public void onChange(int listIndex, Note note) {
             Toast.makeText(fragment.getContext(), "onChanged:" + listIndex, Toast.LENGTH_SHORT).show();
             notes.updateItemAt(listIndex, notes.get(listIndex));
+            MainActivity.getNotesManager().updateNote(listIndex, notes.get(listIndex));
         }
     }
 

@@ -60,12 +60,12 @@ public class ListFragment extends Fragment {
                 currentItem = index;
                 if (MainActivity.isIsLandscape()) {
                     getFragmentManager().beginTransaction()
-                            .replace(R.id.detailsContainer, DetailsFragment.newInstance(currentItem))
+                            .replace(R.id.detailsContainer, DetailsFragment.newInstance(currentItem, notes.get(currentItem)))
                             .addToBackStack(null)
                             .commit();
                 } else {
                     getFragmentManager().beginTransaction()
-                            .replace(R.id.mainContainer, DetailsFragment.newInstance(currentItem))
+                            .replace(R.id.mainContainer, DetailsFragment.newInstance(currentItem, notes.get(currentItem)))
                             .addToBackStack(null)
                             .commit();
                 }

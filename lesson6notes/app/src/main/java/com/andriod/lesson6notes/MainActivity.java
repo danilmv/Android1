@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        isLandscape = getResources().getConfiguration().orientation== Configuration.ORIENTATION_LANDSCAPE;
+        isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.mainContainer, new RecyclerFragment())
                 .commit();
         if (isIsLandscape())
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.detailsContainer, DetailsFragment.newInstance(0))
+                    .replace(R.id.detailsContainer, DetailsFragment.newInstance(0, null))
                     .commit();
 
     }
